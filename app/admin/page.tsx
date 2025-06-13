@@ -10,7 +10,7 @@ export default function AdminPage() {
     .then((res) => res.json()) 
     .then((data) => {
       setEntries(
-        data.map((entry: any) => ({
+        data.map((entry: moodEntries) => ({
           ...entry,
           createdAt: new Date(entry.createdAt),
         }))
